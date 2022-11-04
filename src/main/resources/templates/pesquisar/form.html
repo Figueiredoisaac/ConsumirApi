@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- 
     <link rel="stylesheet" th:href="@{/style/reset.css}" />
     <link rel="stylesheet" th:href="@{/style/style.css}" />
-    <!-- 
+    -->  
     <link rel="stylesheet" href="/src/main/resources/static/style/reset.css" />
     <link rel="stylesheet" href="/src/main/resources/static/style/style.css" />
-    -->   
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +21,13 @@
 	
 		<section class="container">
             <div class="container-form" id="form-pesquisar">
-                <div class="titulo-pesquisar"><div>PESQUISE SEU FILME FAVORITO AQUI!</div></div>
-        <div class="imagem-container"> <img class="imagem-titulo" th:src="@{/img/pngwing.com.png}" alt=""></div>
-        <!--src="/src/main/resources/static/img/pngwing.com.png" -->
+                <div class="titulo-pesquisar"><div>CONSULTE POR POSIÇÃO AQUI!</div></div>
+                <div class="imagem-container"> <img class="imagem-titulo" src="/src/main/resources/static/img/pngwing.com.png"  alt=""></div>
+                <!--th:src="@{/img/pngwing.com.png}" -->
                 <div class="form-nome">
-                    <br>
-                    <br>
                     <form action="resultado" method="post">
-                        <div class="label-pesquisar" >QUAL FILME DESEJA?</div> <input class="field-pesquisar" type="text" name="title">
-                        <br>
-                        <br>
+                        <div class="label-pesquisar" >SELECIONE A CLASSIFICAÇÃO À CONSULTAR</div>
+                        <input class="field-pesquisar" type="number" name="rank">
                         <input class="button-enviar" type="submit">
                     </form>
                 </div>

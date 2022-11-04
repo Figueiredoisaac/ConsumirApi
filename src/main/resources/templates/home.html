@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- 
     <link rel="stylesheet" th:href="@{/style/reset.css}" />
     <link rel="stylesheet" th:href="@{/style/style.css}" />
-    <!-- 
+    -->  
     <link rel="stylesheet" href="/src/main/resources/static/style/reset.css" />
     <link rel="stylesheet" href="/src/main/resources/static/style/style.css" />
-    -->   
+ 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,12 +22,12 @@
 	
 		<section class="container">
             <div class="container-form" id="form-pesquisar">
-                <div class="titulo-pesquisar"><div>PESQUISE SEU FILME FAVORITO AQUI!</div></div>
-        <div class="imagem-container"> <img class="imagem-titulo" th:src="@{/img/pngwing.com.png}" alt=""></div>
-        <!--src="/src/main/resources/static/img/pngwing.com.png" -->
+                <div class="titulo-pesquisar"><div>TOP 250 FILMES</div></div>
+        <div class="imagem-container"> <img class="imagem-titulo" src="/src/main/resources/static/img/pngwing.com.png"  alt=""></div>
+        <!--th:src="@{/img/pngwing.com.png}" -->
                 <div class="form-nome">
                     <form action="pesquisar/form" method="get">
-                        <input class="button-pesquisar" type="submit" value="PESQUISAR">
+                        <input class="button-pesquisar" type="submit" value="DESCOBRIR">
                     </form>
                 </div>
             </div>

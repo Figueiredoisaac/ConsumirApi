@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- 
     <link rel="stylesheet" th:href="@{/style/reset.css}" />
     <link rel="stylesheet" th:href="@{/style/style.css}" />
-    <!-- 
+    -->  
     <link rel="stylesheet" href="/src/main/resources/static/style/reset.css" />
     <link rel="stylesheet" href="/src/main/resources/static/style/style.css" />
-    -->    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,14 +20,17 @@
 <body>
     <div class="container" th:each="filme : ${filme}">
         <div class="titulo-pesquisar"><span th:text="${filme.title}">TITULO DO FILME</span></div>
-        <div class="imagem-container"> <img class="imagem-titulo" th:src="@{/img/pngwing.com.png}" alt=""></div>
-        <!--src="/src/main/resources/static/img/pngwing.com.png" -->
+        <div class="imagem-container"> <img class="imagem-titulo" src="/src/main/resources/static/img/pngwing.com.png"  alt=""></div>
+        <!--th:src="@{/img/pngwing.com.png}" -->
         <div class="form-resultado" >
             <span class="rank" th:text="${filme.rank}">#0</span>
             <span class="titulo" th:text="${filme.title}">titulo</span>
-            <span class="titulo-full" th:text="${filme.fullTitle}">titulo completo</span>
-
+            <span class="titulo-full" th:text="${filme.fullTitle}">titulo completo</span> 
         </div>
+        <form action="form">
+        <input class="button-pesquisar"  type="submit" value="voltar">
+        </form>
+    
     </div>
 </body>
 <footer>

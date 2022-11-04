@@ -2,9 +2,12 @@ package br.com.figueiredoisaac.consumirApi.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +29,16 @@ public class PesquisarController {
 	}
 	
 	@PostMapping("resultado")
-	public String resultadoPesquisa(Model model, RequisicaoNovaPesquisa requisicaoNovaPesquisa) {
+	public String resultadoPesquisa(RequisicaoNovaPesquisa requisicaoNovaPesquisa, Model model) {
+		
 		
 		Filme filme = requisicaoNovaPesquisa.toFilme();
-		List<Filme> filmes = filmeRepository.findByTitle(filme.getTitle());
+		List<Filme> filmes = filmeRepository.findByRank(filme.getRank());
+		if(filmes.isEmpty()) {
+			Filme naoEncontrao = new Filme(0,"Não Encontrado","Tente outro Filme");
+			filmes.add(naoEncontrao);
+		}
+			
 		model.addAttribute("filme",filmes);
 		
 		return "pesquisar/resultado"; 

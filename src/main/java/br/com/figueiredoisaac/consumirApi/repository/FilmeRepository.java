@@ -10,5 +10,5 @@ import br.com.figueiredoisaac.consumirApi.model.Filme;
 @Repository
 public interface FilmeRepository extends JpaRepository<Filme, Integer> {
 
-	List<Filme> findByTitle(String title);
+	List<Filme> findByRank(int rank);
 }
