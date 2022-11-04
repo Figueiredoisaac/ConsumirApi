@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" th:href="@{/style/reset.css}" />
+    <link rel="stylesheet" th:href="@{/style/style.css}" />
+    <!-- 
+    <link rel="stylesheet" href="/src/main/resources/static/style/reset.css" />
+    <link rel="stylesheet" href="/src/main/resources/static/style/style.css" />
+    -->    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+<title>Pesquisar Filmes</title>
+</head>
+<body>
+    <div class="container" th:each="filme : ${filme}">
+        <div class="titulo-pesquisar"><span th:text="${filme.title}">TITULO DO FILME</span></div>
+        <div class="imagem-container"> <img class="imagem-titulo" th:src="@{/img/pngwing.com.png}" alt=""></div>
+        <!--src="/src/main/resources/static/img/pngwing.com.png" -->
+        <div class="form-resultado" >
+            <span class="rank" th:text="${filme.rank}">#0</span>
+            <span class="titulo" th:text="${filme.title}">titulo</span>
+            <span class="titulo-full" th:text="${filme.fullTitle}">titulo completo</span>
+
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="autor">Feito por Isaac Figueiredo</div>
+</footer>
+</html>

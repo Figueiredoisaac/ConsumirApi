@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" th:href="@{/style/reset.css}" />
+    <link rel="stylesheet" th:href="@{/style/style.css}" />
+    <!-- 
+    <link rel="stylesheet" href="/src/main/resources/static/style/reset.css" />
+    <link rel="stylesheet" href="/src/main/resources/static/style/style.css" />
+    -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+<title>Pesquisar Filmes</title>
+</head>
+<body>
+	
+		<section class="container">
+            <div class="container-form" id="form-pesquisar">
+                <div class="titulo-pesquisar"><div>PESQUISE SEU FILME FAVORITO AQUI!</div></div>
+        <div class="imagem-container"> <img class="imagem-titulo" th:src="@{/img/pngwing.com.png}" alt=""></div>
+        <!--src="/src/main/resources/static/img/pngwing.com.png" -->
+                <div class="form-nome">
+                    <form action="pesquisar/form" method="get">
+                        <input class="button-pesquisar" type="submit" value="PESQUISAR">
+                    </form>
+                </div>
+            </div>
+	
+	
+</body>
+<footer>
+    <div class="autor">Feito por Isaac Figueiredo</div>
+</footer>
+</html>
